@@ -50,7 +50,6 @@ int main() {
 // Each answer[i] is calculated considering the initial state of the boxes.
 
  
-
 // Example 1:
 
 // Input: boxes = "110"
