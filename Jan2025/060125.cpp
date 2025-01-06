@@ -24,5 +24,17 @@ public:
 
 void test() {
     Solution s;
-    
+    // string boxes = "110"; 
+    string boxes = "001011";
+
+    vector<int> ans = s.minOperations(boxes); // Declare `ans` correctly
+    for (int val : ans) {
+        cout << val << " "; // Print the result
+    }
+    cout << endl;
+}
+
+int main() {
+    test();
+    return 0;
 }
