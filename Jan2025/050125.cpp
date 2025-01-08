@@ -36,3 +36,7 @@ public:
         return s;
     }
 };
+
+void test() {
+    
+}
