@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class Solution {
 public:
     int maxFreeTime(int eventTime, vector<int>& startTime, vector<int>& endTime) {
@@ -41,3 +45,36 @@ public:
         return ans;
     }
 };
+
+int main() {
+    Solution sol;
+
+    vector<vector<int>> startTimes = {
+        {2, 8, 14},
+        {1, 3},
+        {0, 7, 9},
+        {0, 3, 7, 9},
+        {0, 1, 2, 3, 4}
+    };
+
+    vector<vector<int>> endTimes = {
+        {6, 10, 18},
+        {2, 5},
+        {1, 8, 10},
+        {1, 4, 8, 10},
+        {1, 2, 3, 4, 5}
+    };
+
+    vector<int> eventTimes = {20, 5, 10, 10, 5};
+    vector<int> expected = {8, 2, 7, 6, 0};
+
+    for (size_t i = 0; i < eventTimes.size(); ++i) {
+        int result = sol.maxFreeTime(eventTimes[i], startTimes[i], endTimes[i]);
+        if (result == expected[i]) {
+            cout << "Test case #" << (i + 1) << ": PASS" << endl;
+        } else {
+            cout << "Test case #" << (i + 1) << ": FAIL (got " << result << ", expected " << expected[i] << ")" << endl;
+        }
+    }
+    return 0;
+}
