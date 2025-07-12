@@ -41,18 +41,23 @@ class Solution:
         return 0
 
 
-test_cases = [
-    {
-        "n": 2,
-        "meetings": [[0, 10], [1, 5], [2, 7], [3, 4]],
-        "expected": 0
-    },
-    {
-        "n": 3,
-        "meetings": [[1, 20], [2, 10], [3, 5], [4, 9], [6, 8]],
-        "expected": 1
-    }
-]
-
 if __name__ == "__main__":
     sol = Solution()
+    
+    test_cases = [
+        {
+            "n": 2,
+            "meetings": [[0, 10], [1, 5], [2, 7], [3, 4]],
+            "expected": 0
+        },
+        {
+            "n": 3,
+            "meetings": [[1, 20], [2, 10], [3, 5], [4, 9], [6, 8]],
+            "expected": 1
+        }
+    ]
+
+    for idx, test in enumerate(test_cases):
+        result = sol.mostBooked(test["n"], test["meetings"])
+        status = "PASS" if result == test["expected"] else f"FAIL (got {result})"
+        print(f"Test case #{idx + 1}: {status}")
