@@ -1,4 +1,3 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/README.md b/README.md
 index 12e21281f649bf738165227e2236d24759b02629..57e898269f09badb6e857ceaf47c5ad8bb6a90d9 100644
 --- a/README.md
@@ -44,6 +43,3 @@ index 12e21281f649bf738165227e2236d24759b02629..57e898269f09badb6e857ceaf47c5ad8
 +  ```
 +
 +Repo chỉ mang tính chất lưu trữ và tham khảo các giải pháp cá nhân.
- 
-EOF
-)
