@@ -19,6 +19,7 @@ class Solution:
                     heappush(frontier, (totalCost, d))
                     seenCost[d] = totalCost
         return bests
+
     def minimumCost(self, source: str, target: str, original: List[str], changed: List[str], cost: List[int]) -> int:
         self.edges = defaultdict(lambda: {})
         for i in range(len(original)):
@@ -43,4 +44,5 @@ class Solution:
                         totalCost += best[t]
                     else:
                         return -1
+                        
         return totalCost
